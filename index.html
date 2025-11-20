@@ -1,137 +1,190 @@
-<!-- Think & Trade Landing Page with TailwindCSS -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Think & Trade - Learn & Earn Program</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Think & Trade – Learn & Earn</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
   <style>
-    body { background-color: #e5f6e5; }
+    :root {
+      --brand-green: #0f9d58;
+      --brand-dark: #081223;
+    }
+    .glass {
+      backdrop-filter: blur(6px);
+      background: rgba(255,255,255,0.75);
+    }
+    .float-anim {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
   </style>
 </head>
-<body class="text-gray-800">
-  <!-- HERO SECTION -->
-  <section class="bg-green-600 text-white py-16 px-6 text-center shadow-lg">
-    <img src="/mnt/data/WhatsApp Image 2025-11-20 at 02.49.45_c2297475.jpg" alt="Logo" class="mx-auto w-32 mb-4 rounded-full shadow-lg" />
-    <h1 class="text-4xl font-extrabold mb-3">Think & Trade Apprenticeship & Affiliate Program</h1>
-    <p class="text-lg opacity-90 max-w-2xl mx-auto">Learn trading, earn commissions, and grow your financial skills with structured mentorship and real-world experience.</p>
-    <a href="#join" class="mt-6 inline-block bg-white text-green-700 px-6 py-3 rounded-xl font-semibold shadow hover:bg-gray-100 transition">Get Started</a>
-  </section>
 
-  <!-- WHAT YOU GET -->
-  <section class="max-w-5xl mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold text-center text-green-700 mb-10">What You Get</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="font-bold text-xl text-green-600 mb-3">Free Mentorship</h3>
-        <p>Learn market structure, psychology, strategy building, and risk management from a 7-year trading mentor.</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="font-bold text-xl text-green-600 mb-3">Earn Commissions</h3>
-        <p>Earn $20–$200 per referral when clients purchase signals or mentorship packages.</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="font-bold text-xl text-green-600 mb-3">Community Access</h3>
-        <p>Join a network of traders learning, sharing charts, and building together.</p>
-      </div>
-    </div>
-  </section>
+<body class="antialiased text-gray-800 bg-gradient-to-b from-white via-green-50 to-white">
 
-  <!-- PRICING SECTION -->
-  <section class="bg-green-50 py-16 px-6">
-    <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Pricing</h2>
-    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <div class="bg-white shadow rounded-2xl p-6">
-        <h3 class="text-xl font-bold text-green-700">Signals Subscription</h3>
-        <p class="text-4xl font-extrabold mt-2">$50 <span class="text-lg">/ month</span></p>
-        <ul class="mt-4 space-y-2 text-gray-700">
-          <li>✓ Daily trade ideas</li>
-          <li>✓ Risk management guidance</li>
-          <li>✓ Weekly market breakdowns</li>
-        </ul>
-      </div>
-      <div class="bg-white shadow rounded-2xl p-6 border-4 border-green-500">
-        <h3 class="text-xl font-bold text-green-700">Group Mentorship</h3>
-        <p class="text-4xl font-extrabold mt-2">$600</p>
-        <ul class="mt-4 space-y-2 text-gray-700">
-          <li>✓ Full strategy course</li>
-          <li>✓ Live sessions</li>
-          <li>✓ Community access</li>
-        </ul>
-      </div>
-      <div class="bg-white shadow rounded-2xl p-6">
-        <h3 class="text-xl font-bold text-green-700">1-on-1 Mentorship</h3>
-        <p class="text-4xl font-extrabold mt-2">$1200</p>
-        <ul class="mt-4 space-y-2 text-gray-700">
-          <li>✓ Personalized training</li>
-          <li>✓ Direct support</li>
-          <li>✓ Full access to everything</li>
-        </ul>
+  <!-- HEADER -->
+  <header class="bg-[color:var(--brand-green)] text-white py-12">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+      
+      <!-- LOGO -->
+      <img src="WhatsApp Image 2025-11-20 at 02.49.45_c2297475.jpg"
+           alt="Think & Trade Logo"
+           class="w-28 h-28 rounded-full object-cover shadow-lg border-4 border-white float-anim" />
+
+      <div class="text-center md:text-left">
+        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">
+          Think & Trade — Apprenticeship & Affiliate Program
+        </h1>
+
+        <p class="mt-2 opacity-90 max-w-xl">
+          Learn trading professionally and earn commissions by referring others to join the program.
+        </p>
+
+        <div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+          
+          <!-- REFERRAL BUTTON -->
+          <a id="ctaReferral"
+             class="inline-block px-6 py-3 rounded-lg font-semibold shadow-lg bg-white text-[color:var(--brand-green)] hover:opacity-90 transition"
+             target="_blank" rel="noopener">
+             Join Referral Program
+          </a>
+
+          <!-- PAYMENT BUTTON -->
+          <a href="https://forms.gle/RbcvsuKGEbUvC5K19"
+             class="inline-block px-6 py-3 rounded-lg font-semibold shadow-lg bg-[color:var(--brand-dark)] text-white hover:opacity-90 transition"
+             target="_blank" rel="noopener">
+             Pay & Register
+          </a>
+
+        </div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- TESTIMONIALS -->
-  <section class="max-w-5xl mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Testimonials</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded-2xl shadow text-center">
-        <p class="italic">“This program helped me finally understand trading. I made my first consistent months thanks to Petrus.”</p>
-        <h4 class="mt-4 font-bold">— David</h4>
+  <!-- MAIN CONTENT -->
+  <main class="max-w-5xl mx-auto px-6 -mt-10">
+
+    <!-- HIGHLIGHTS -->
+    <section class="grid md:grid-cols-3 gap-6">
+      <div class="glass p-6 rounded-2xl shadow">
+        <h3 class="font-bold text-lg text-[color:var(--brand-green)]">Free Mentorship</h3>
+        <p class="mt-2 text-sm">Get practical training in risk management, psychology, sessions, and trade execution.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow text-center">
-        <p class="italic">“The affiliate side is real. I earned my first $100 online within two weeks.”</p>
-        <h4 class="mt-4 font-bold">— Amara</h4>
+
+      <div class="glass p-6 rounded-2xl shadow">
+        <h3 class="font-bold text-lg text-[color:var(--brand-green)]">Earn Commissions</h3>
+        <p class="mt-2 text-sm">$20, $100, or $200 depending on the product your referral buys.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow text-center">
-        <p class="italic">“The mentorship is priceless. The community alone is worth it.”</p>
-        <h4 class="mt-4 font-bold">— Tunde</h4>
+
+      <div class="glass p-6 rounded-2xl shadow">
+        <h3 class="font-bold text-lg text-[color:var(--brand-green)]">Community Support</h3>
+        <p class="mt-2 text-sm">Join our trading group with shared charts, feedback, & growth tracking.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ -->
-  <section class="bg-green-50 py-16 px-6">
-    <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Frequently Asked Questions</h2>
-    <div class="max-w-3xl mx-auto space-y-4">
-      <details class="bg-white p-4 rounded-xl shadow">
-        <summary class="font-semibold">Is this program beginner‑friendly?</summary>
-        <p class="mt-2">Yes! Everything is explained clearly with step‑by‑step guidance.</p>
-      </details>
+    <!-- PRICING -->
+    <section class="mt-10 p-6 bg-white rounded-2xl shadow">
+      <h2 class="text-2xl font-bold text-[color:var(--brand-dark)] mb-4">Pricing & Commissions</h2>
 
-      <details class="bg-white p-4 rounded-xl shadow">
-        <summary class="font-semibold">How do referrals work?</summary>
-        <p class="mt-2">Share your referral link. When people register, your code is automatically tracked.</p>
-      </details>
+      <div class="grid md:grid-cols-3 gap-4">
 
-      <details class="bg-white p-4 rounded-xl shadow">
-        <summary class="font-semibold">When do I get paid?</summary>
-        <p class="mt-2">Payments are made monthly via crypto, PayPal, or bank transfer.</p>
-      </details>
-    </div>
-  </section>
+        <div class="p-4 border rounded-lg">
+          <div class="text-sm font-semibold text-[color:var(--brand-green)]">Signals</div>
+          <div class="text-2xl font-extrabold">$50<span class="text-base font-medium">/mo</span></div>
+          <div class="mt-2 text-sm">Affiliate Earns: <strong>$20/month</strong></div>
+        </div>
 
-  <!-- JOIN SECTION -->
-  <section id="join" class="max-w-4xl mx-auto py-16 px-6 text-center">
-    <h2 class="text-3xl font-bold text-green-700 mb-6">Join the Program</h2>
-    <p class="mb-8 text-lg">Choose whether you want to join the referral program or pay for mentorship.</p>
+        <div class="p-4 border rounded-lg bg-green-50">
+          <div class="text-sm font-semibold text-[color:var(--brand-green)]">Group Mentorship</div>
+          <div class="text-2xl font-extrabold">$600</div>
+          <div class="mt-2 text-sm">Affiliate Earns: <strong>$100</strong></div>
+        </div>
 
-    <div class="flex flex-col md:flex-row justify-center gap-6">
-      <a id="referralLink" href="https://forms.gle/siobL7nBrT1cnByu8" target="_blank" class="bg-green-600 text-white px-8 py-4 rounded-xl shadow hover:bg-green-700 transition font-semibold">Join Referral Program</a>
+        <div class="p-4 border rounded-lg">
+          <div class="text-sm font-semibold text-[color:var(--brand-green)]">1-on-1 Mentorship</div>
+          <div class="text-2xl font-extrabold">$1,200</div>
+          <div class="mt-2 text-sm">Affiliate Earns: <strong>$200</strong></div>
+        </div>
 
-      <a href="https://forms.gle/RbcvsuKGEbUvC5K19" target="_blank" class="bg-gray-900 text-white px-8 py-4 rounded-xl shadow hover:bg-black transition font-semibold">Pay & Register</a>
-    </div>
-  </section>
+      </div>
+    </section>
 
+    <!-- TESTIMONIALS -->
+    <section class="mt-8 grid md:grid-cols-3 gap-4">
+      <article class="bg-white p-6 rounded-xl shadow">
+        <p class="italic">“This community helped me understand trading clearly. Highly recommended.”</p>
+        <p class="mt-3 font-bold">— David</p>
+      </article>
+
+      <article class="bg-white p-6 rounded-xl shadow">
+        <p class="italic">“The affiliate program is real. I earned my first $100 online fast.”</p>
+        <p class="mt-3 font-bold">— Amara</p>
+      </article>
+
+      <article class="bg-white p-6 rounded-xl shadow">
+        <p class="italic">“Best mentorship I’ve joined. Everything is simplified and practical.”</p>
+        <p class="mt-3 font-bold">— Tunde</p>
+      </article>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mt-8 p-6 bg-[color:var(--brand-green)] text-white rounded-2xl shadow">
+      <h3 class="text-xl font-bold">FAQ</h3>
+
+      <div class="mt-4 space-y-2">
+        
+        <details class="bg-white/10 p-3 rounded">
+          <summary class="font-semibold">Is this beginner friendly?</summary>
+          <div class="mt-2 text-sm">Yes — we accept complete beginners.</div>
+        </details>
+
+        <details class="bg-white/10 p-3 rounded">
+          <summary class="font-semibold">How do referrals work?</summary>
+          <div class="mt-2 text-sm">
+            Share your unique link like:  
+            <code class="bg-black/20 px-2 py-1 rounded">/?ref=YourCode</code><br>
+            The system will automatically insert your code into the form.
+          </div>
+        </details>
+
+        <details class="bg-white/10 p-3 rounded">
+          <summary class="font-semibold">When do I get paid?</summary>
+          <div class="mt-2 text-sm">Monthly payouts via crypto, PayPal, or bank transfer.</div>
+        </details>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="mt-12 py-8 text-center text-sm text-gray-600">
+    © 2025 Think & Trade • Hosted on GitHub Pages
+  </footer>
+
+  <!-- REFERRAL AUTO-FILL SCRIPT -->
   <script>
-    // Auto referral tracking from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const ref = urlParams.get('ref');
-    if (ref) {
-      document.getElementById("referralLink").href = `https://forms.gle/siobL7nBrT1cnByu8?usp=pp_url&entry.123456=${ref}`;
+    const ENTRY_ID = "entry.1176641648";
+    const FORM_BASE = "https://docs.google.com/forms/d/e/1FAIpQLScIOgIKNmn3BUHlOXTFvwBnLFiSuvqKjIA-AvIDsosoBx-ZLw/viewform";
+
+    const params = new URLSearchParams(window.location.search);
+    const refCode = params.get("ref");
+
+    function buildReferralLink(code) {
+      if (!code) return FORM_BASE + "?usp=pp_url";
+      return FORM_BASE + "?usp=pp_url&" + ENTRY_ID + "=" + encodeURIComponent(code);
     }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("ctaReferral").href = buildReferralLink(refCode);
+    });
   </script>
 
 </body>
