@@ -72,8 +72,36 @@
   <!-- MAIN CONTENT -->
   <main class="max-w-5xl mx-auto px-6 -mt-10">
 
+    <!-- 🎮 GAME SECTION -->
+    <section class="mt-10 bg-white p-6 rounded-2xl shadow">
+      <h2 class="text-2xl font-bold text-[color:var(--brand-dark)]">Play Trading Simulator</h2>
+      <p class="mt-2 text-sm text-gray-600">Practice trading with our interactive candle simulator.</p>
+
+      <a href="https://dxdy1010.github.io/trading-sim/"
+         class="inline-block mt-4 px-6 py-3 bg-[color:var(--brand-green)] text-white font-semibold rounded-lg shadow hover:opacity-90 transition">
+         Launch Simulator
+      </a>
+    </section>
+
+    <!-- 📱 WHATSAPP COMMUNITY CTA -->
+    <section class="mt-10 p-6 bg-green-50 rounded-2xl shadow flex items-center gap-4">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+           alt="WhatsApp" class="w-12 h-12">
+
+      <div>
+        <h3 class="font-bold text-lg text-[color:var(--brand-dark)]">Join Our WhatsApp Community</h3>
+        <p class="text-sm text-gray-700">Connect with traders, get updates, and receive support.</p>
+
+        <a id="waBtn"
+           href="https://chat.whatsapp.com/INuWgPMBCHnA8rzAiln3PN"
+           class="inline-block mt-3 px-6 py-2 bg-[color:var(--brand-green)] text-white rounded-lg font-semibold shadow hover:opacity-90 transition">
+           Join WhatsApp Group
+        </a>
+      </div>
+    </section>
+
     <!-- HIGHLIGHTS -->
-    <section class="grid md:grid-cols-3 gap-6">
+    <section class="grid md:grid-cols-3 gap-6 mt-10">
       <div class="glass p-6 rounded-2xl shadow">
         <h3 class="font-bold text-lg text-[color:var(--brand-green)]">Free Mentorship</h3>
         <p class="mt-2 text-sm">Get practical training in risk management, psychology, sessions, and trade execution.</p>
@@ -182,9 +210,17 @@
       return FORM_BASE + "?usp=pp_url&" + ENTRY_ID + "=" + encodeURIComponent(code);
     }
 
+    // referral link
     document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("ctaReferral").href = buildReferralLink(refCode);
     });
+
+    // WhatsApp: open in same tab on mobile, new tab on desktop
+    const waBtn = document.getElementById("waBtn");
+    if (window.innerWidth > 768) {
+      waBtn.target = "_blank";
+      waBtn.rel = "noopener";
+    }
   </script>
 
 </body>
