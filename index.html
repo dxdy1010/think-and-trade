@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Think & Trade – Learn & Earn</title>
+  <title>Think & Trade — Professional Trading Services</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -12,215 +12,253 @@
     :root {
       --brand-green: #0f9d58;
       --brand-dark: #081223;
+      --accent: #06b6d4;
     }
-    .glass {
-      backdrop-filter: blur(6px);
-      background: rgba(255,255,255,0.75);
-    }
-    .float-anim {
-      animation: float 6s ease-in-out infinite;
-    }
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-      100% { transform: translateY(0); }
-    }
+    body { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    .glass { backdrop-filter: blur(6px); background: rgba(255,255,255,0.75); }
+    .float-anim { animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0% { transform: translateY(0);} 50% { transform: translateY(-6px);} 100% { transform: translateY(0);} }
+    .card-hover { transition: transform .18s ease, box-shadow .18s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,23,0.08); }
+    /* make buttons finger-friendly on mobile */
+    button, a.btn { -webkit-tap-highlight-color: transparent; }
   </style>
 </head>
 
 <body class="antialiased text-gray-800 bg-gradient-to-b from-white via-green-50 to-white">
 
-  <!-- HEADER -->
+  <!-- HEADER / HERO -->
   <header class="bg-[color:var(--brand-green)] text-white py-12">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
-      
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
       <!-- LOGO -->
       <img src="WhatsApp Image 2025-11-20 at 02.49.45_c2297475.jpg"
            alt="Think & Trade Logo"
            class="w-28 h-28 rounded-full object-cover shadow-lg border-4 border-white float-anim" />
 
-      <div class="text-center md:text-left">
-        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">
-          Think & Trade — Apprenticeship & Affiliate Program
+      <div class="text-center md:text-left flex-1">
+        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight tracking-tight">
+          Think & Trade — Professional Trading Services
         </h1>
 
-        <p class="mt-2 opacity-90 max-w-xl">
-          Learn trading professionally and earn commissions by referring others to join the program.
+        <p class="mt-3 max-w-2xl opacity-95">
+          Premium mentorship, verified trading signals, and lifetime membership options to level up your trading.
+          Focused, practical, and results-oriented.
         </p>
 
         <div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-          
-          <!-- REFERRAL BUTTON -->
-          <a id="ctaReferral"
-             class="inline-block px-6 py-3 rounded-lg font-semibold shadow-lg bg-white text-[color:var(--brand-green)] hover:opacity-90 transition"
-             target="_blank" rel="noopener">
-             Join Referral Program
+          <a id="payMain" href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Signals"
+             class="btn inline-block px-6 py-3 rounded-lg font-semibold shadow-lg bg-[color:var(--brand-dark)] text-white hover:opacity-95 transition">
+            Pay & Register
           </a>
 
-          <!-- PAYMENT BUTTON -->
-          <a href="https://forms.gle/RbcvsuKGEbUvC5K19"
-             class="inline-block px-6 py-3 rounded-lg font-semibold shadow-lg bg-[color:var(--brand-dark)] text-white hover:opacity-90 transition"
-             target="_blank" rel="noopener">
-             Pay & Register
+          <a href="https://dxdy1010.github.io/trading-sim/"
+             class="inline-block px-6 py-3 rounded-lg font-semibold shadow-lg bg-white text-[color:var(--brand-green)] hover:opacity-95 transition">
+             Play Simulator
           </a>
-
         </div>
+      </div>
+
+      <!-- small stats -->
+      <div class="hidden md:block text-sm text-white text-right">
+        <div><strong>Support:</strong> WhatsApp community</div>
+        <div><strong>Hosted:</strong> GitHub Pages</div>
       </div>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="max-w-5xl mx-auto px-6 -mt-10">
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-6 -mt-10 pb-16">
 
-    <!-- 🎮 GAME SECTION -->
-    <section class="mt-10 bg-white p-6 rounded-2xl shadow">
-      <h2 class="text-2xl font-bold text-[color:var(--brand-dark)]">Play Trading Simulator</h2>
-      <p class="mt-2 text-sm text-gray-600">Practice trading with our interactive candle simulator.</p>
+    <!-- WhatsApp CTA (prominent section per your choice C) -->
+    <section class="mt-6 p-6 bg-white rounded-2xl shadow flex flex-col md:flex-row items-center gap-6">
+      <div class="flex items-center gap-4">
+        <!-- WhatsApp icon inline SVG for reliability -->
+        <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[color:var(--brand-green)]">
+          <svg viewBox="0 0 24 24" class="w-8 h-8 text-white" fill="currentColor" aria-hidden="true">
+            <path d="M20.52 3.48A11.86 11.86 0 0012 .5 11.86 11.86 0 003.48 3.48 11.86 11.86 0 00.5 12c0 2.03.53 4.14 1.6 6.11L.03 23.5l5.44-1.43A11.86 11.86 0 0012 23.5c6.57 0 11.9-5.33 11.9-11.9 0-3.18-1.24-6.15-3.38-8.12zM12 21.5c-1.57 0-3.1-.42-4.45-1.22l-.32-.19-3.23.85.86-3.15-.21-.34A9.4 9.4 0 012.5 12 9.5 9.5 0 1112 21.5z"/>
+            <path d="M17.4 14.2c-.3-.15-1.77-.88-2.04-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.94 1.18-.17.2-.34.22-.64.07-.3-.15-1.27-.47-2.42-1.49-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.12.3-.32.45-.48.15-.15.2-.25.3-.42.1-.17.05-.32-.02-.47-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.66-.51l-.55-.01c-.17 0-.45.06-.69.32-.24.27-.94.92-.94 2.25 0 1.33.96 2.62 1.09 2.8.13.17 1.89 2.9 4.58 4.03 1.63.7 2.34.91 3.17 1.02.6.08 1.16.06 1.6.04.49-.03 1.5-.61 1.71-1.2.21-.6.21-1.12.15-1.22-.06-.1-.24-.15-.54-.3z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-[color:var(--brand-dark)]">Join Our WhatsApp Community</h3>
+          <p class="text-sm text-gray-600">Get live support, charts, and community updates.</p>
+        </div>
+      </div>
 
-      <a href="https://dxdy1010.github.io/trading-sim/"
-         class="inline-block mt-4 px-6 py-3 bg-[color:var(--brand-green)] text-white font-semibold rounded-lg shadow hover:opacity-90 transition">
-         Launch Simulator
-      </a>
-    </section>
-
-    <!-- 📱 WHATSAPP COMMUNITY CTA -->
-    <section class="mt-10 p-6 bg-green-50 rounded-2xl shadow flex items-center gap-4">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-           alt="WhatsApp" class="w-12 h-12">
-
-      <div>
-        <h3 class="font-bold text-lg text-[color:var(--brand-dark)]">Join Our WhatsApp Community</h3>
-        <p class="text-sm text-gray-700">Connect with traders, get updates, and receive support.</p>
-
-        <a id="waBtn"
-           href="https://chat.whatsapp.com/INuWgPMBCHnA8rzAiln3PN"
-           class="inline-block mt-3 px-6 py-2 bg-[color:var(--brand-green)] text-white rounded-lg font-semibold shadow hover:opacity-90 transition">
+      <div class="ml-auto">
+        <a id="waJoin" href="https://chat.whatsapp.com/INuWgPMBCHnA8rzAiln3PN"
+           class="inline-block px-5 py-3 rounded-lg bg-[color:var(--brand-green)] text-white font-semibold shadow hover:opacity-95 transition">
            Join WhatsApp Group
         </a>
       </div>
     </section>
 
-    <!-- HIGHLIGHTS -->
-    <section class="grid md:grid-cols-3 gap-6 mt-10">
-      <div class="glass p-6 rounded-2xl shadow">
-        <h3 class="font-bold text-lg text-[color:var(--brand-green)]">Free Mentorship</h3>
-        <p class="mt-2 text-sm">Get practical training in risk management, psychology, sessions, and trade execution.</p>
-      </div>
+    <!-- SERVICES / PRICING -->
+    <section class="mt-10">
+      <h2 class="text-2xl font-bold text-[color:var(--brand-dark)]">Services & Pricing</h2>
+      <p class="mt-2 text-gray-600 max-w-3xl">Premium trading products to accelerate your trading skill and performance. Click any card to pay & register.</p>
 
-      <div class="glass p-6 rounded-2xl shadow">
-        <h3 class="font-bold text-lg text-[color:var(--brand-green)]">Earn Commissions</h3>
-        <p class="mt-2 text-sm">$20, $100, or $200 depending on the product your referral buys.</p>
-      </div>
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
 
-      <div class="glass p-6 rounded-2xl shadow">
-        <h3 class="font-bold text-lg text-[color:var(--brand-green)]">Community Support</h3>
-        <p class="mt-2 text-sm">Join our trading group with shared charts, feedback, & growth tracking.</p>
-      </div>
-    </section>
+        <!-- SIGNALS -->
+        <a id="paySignals" href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Signals" class="block p-6 bg-white rounded-2xl shadow card-hover">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-[color:var(--brand-green)]">Signals</h3>
+              <p class="mt-2 text-sm text-gray-600 max-w-xs">
+                Monthly subscription. Receive curated trade setups with clear entry, stop-loss and take-profit levels. Perfect for traders who want professional trade ideas and proven setups — traded responsibly and with clear risk guidance.
+              </p>
+            </div>
+            <div class="text-right">
+              <div class="text-2xl font-extrabold">$600</div>
+              <div class="text-xs text-gray-500">per month</div>
+            </div>
+          </div>
 
-    <!-- PRICING -->
-    <section class="mt-10 p-6 bg-white rounded-2xl shadow">
-      <h2 class="text-2xl font-bold text-[color:var(--brand-dark)] mb-4">Pricing & Commissions</h2>
+          <div class="mt-4 flex items-center justify-between">
+            <div class="text-xs text-gray-500">Support via WhatsApp • Strategy notes</div>
+            <div>
+              <span class="inline-block px-3 py-1 text-sm bg-[color:var(--brand-green)] text-white rounded-lg font-semibold">Subscribe</span>
+            </div>
+          </div>
+        </a>
 
-      <div class="grid md:grid-cols-3 gap-4">
+        <!-- 3-MONTH MENTORSHIP -->
+        <a id="payMentor" href="https://forms.gle/RbcvsuKGEbUvC5K19?product=3-Month%20Mentorship" class="block p-6 bg-white rounded-2xl shadow card-hover border-2 border-[color:var(--accent)]">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-[color:var(--brand-dark)]">3-Month Mentorship</h3>
+              <p class="mt-2 text-sm text-gray-600 max-w-xs">
+                Intensive, hands-on mentorship designed to transform your trading in 12 weeks. Includes structured weekly lessons, live trade reviews, personalized feedback, a tailored trading plan, and performance analytics. We focus on skill transfer — strategy, psychology, risk management, and trade execution.
+              </p>
+            </div>
+            <div class="text-right">
+              <div class="text-2xl font-extrabold">$1,200</div>
+              <div class="text-xs text-gray-500">one-time</div>
+            </div>
+          </div>
 
-        <div class="p-4 border rounded-lg">
-          <div class="text-sm font-semibold text-[color:var(--brand-green)]">Signals</div>
-          <div class="text-2xl font-extrabold">$50<span class="text-base font-medium">/mo</span></div>
-          <div class="mt-2 text-sm">Affiliate Earns: <strong>$20/month</strong></div>
-        </div>
+          <div class="mt-4 flex items-center justify-between">
+            <div class="text-xs text-gray-500">Live sessions • Personalized plan</div>
+            <div>
+              <span class="inline-block px-3 py-1 text-sm bg-[color:var(--accent)] text-white rounded-lg font-semibold">Enroll</span>
+            </div>
+          </div>
+        </a>
 
-        <div class="p-4 border rounded-lg bg-green-50">
-          <div class="text-sm font-semibold text-[color:var(--brand-green)]">Group Mentorship</div>
-          <div class="text-2xl font-extrabold">$600</div>
-          <div class="mt-2 text-sm">Affiliate Earns: <strong>$100</strong></div>
-        </div>
+        <!-- LIFETIME -->
+        <a id="payLifetime" href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Lifetime%20Membership" class="block p-6 bg-white rounded-2xl shadow card-hover">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-[color:var(--brand-dark)]">Lifetime Membership</h3>
+              <p class="mt-2 text-sm text-gray-600 max-w-xs">
+                Full lifetime access to all courses, tools, live updates, and community. Continuous mentorship support, priority access to new programs, performance audits, and exclusive content. Best choice for traders committed to long-term growth.
+              </p>
+            </div>
+            <div class="text-right">
+              <div class="text-2xl font-extrabold">$2,400</div>
+              <div class="text-xs text-gray-500">one-time</div>
+            </div>
+          </div>
 
-        <div class="p-4 border rounded-lg">
-          <div class="text-sm font-semibold text-[color:var(--brand-green)]">1-on-1 Mentorship</div>
-          <div class="text-2xl font-extrabold">$1,200</div>
-          <div class="mt-2 text-sm">Affiliate Earns: <strong>$200</strong></div>
-        </div>
+          <div class="mt-4 flex items-center justify-between">
+            <div class="text-xs text-gray-500">Lifetime access • Priority support</div>
+            <div>
+              <span class="inline-block px-3 py-1 text-sm bg-[color:var(--brand-green)] text-white rounded-lg font-semibold">Get Access</span>
+            </div>
+          </div>
+        </a>
 
       </div>
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="mt-8 grid md:grid-cols-3 gap-4">
-      <article class="bg-white p-6 rounded-xl shadow">
-        <p class="italic">“This community helped me understand trading clearly. Highly recommended.”</p>
-        <p class="mt-3 font-bold">— David</p>
-      </article>
+    <section class="mt-10">
+      <h2 class="text-2xl font-bold text-[color:var(--brand-dark)]">What Clients Say</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <article class="bg-white p-6 rounded-xl shadow">
+          <p class="italic">“The mentorship changed how I approach risk and my win rate improved significantly.”</p>
+          <p class="mt-3 font-bold">— David</p>
+        </article>
 
-      <article class="bg-white p-6 rounded-xl shadow">
-        <p class="italic">“The affiliate program is real. I earned my first $100 online fast.”</p>
-        <p class="mt-3 font-bold">— Amara</p>
-      </article>
+        <article class="bg-white p-6 rounded-xl shadow">
+          <p class="italic">“Signals are clear and easy to follow. They helped me regain confidence.”</p>
+          <p class="mt-3 font-bold">— Amara</p>
+        </article>
 
-      <article class="bg-white p-6 rounded-xl shadow">
-        <p class="italic">“Best mentorship I’ve joined. Everything is simplified and practical.”</p>
-        <p class="mt-3 font-bold">— Tunde</p>
-      </article>
+        <article class="bg-white p-6 rounded-xl shadow">
+          <p class="italic">“Lifetime membership is worth the price — continuous updates and great support.”</p>
+          <p class="mt-3 font-bold">— Tunde</p>
+        </article>
+      </div>
     </section>
 
     <!-- FAQ -->
-    <section class="mt-8 p-6 bg-[color:var(--brand-green)] text-white rounded-2xl shadow">
+    <section class="mt-10 p-6 bg-[color:var(--brand-green)] text-white rounded-2xl shadow">
       <h3 class="text-xl font-bold">FAQ</h3>
-
-      <div class="mt-4 space-y-2">
-        
+      <div class="mt-4 space-y-3">
         <details class="bg-white/10 p-3 rounded">
-          <summary class="font-semibold">Is this beginner friendly?</summary>
-          <div class="mt-2 text-sm">Yes — we accept complete beginners.</div>
+          <summary class="font-semibold">How do payments work?</summary>
+          <div class="mt-2 text-sm">Click the pay button on a plan. You will be taken to the payment registration form where you upload proof of payment. We verify and grant access within 24 hours.</div>
         </details>
 
         <details class="bg-white/10 p-3 rounded">
-          <summary class="font-semibold">How do referrals work?</summary>
-          <div class="mt-2 text-sm">
-            Share your unique link like:  
-            <code class="bg-black/20 px-2 py-1 rounded">/?ref=YourCode</code><br>
-            The system will automatically insert your code into the form.
-          </div>
+          <summary class="font-semibold">Is Signals a daily service?</summary>
+          <div class="mt-2 text-sm">Signals are issued as trade ideas during active market windows; this is a monthly subscription service. We prioritize quality setups over quantity.</div>
         </details>
 
         <details class="bg-white/10 p-3 rounded">
-          <summary class="font-semibold">When do I get paid?</summary>
-          <div class="mt-2 text-sm">Monthly payouts via crypto, PayPal, or bank transfer.</div>
+          <summary class="font-semibold">What does mentorship include?</summary>
+          <div class="mt-2 text-sm">Structured lessons, live trade reviews, personalized feedback, a trading plan, and performance reports. The 3-month program includes live calls and hands-on mentoring.</div>
         </details>
-
       </div>
     </section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="mt-12 py-8 text-center text-sm text-gray-600">
-    © 2025 Think & Trade • Hosted on GitHub Pages
+    © 2025 Think & Trade • Hosted on GitHub Pages • <a href="https://dxdy1010.github.io/trading-sim/" class="text-[color:var(--brand-green)] hover:underline">Play Simulator</a>
   </footer>
 
-  <!-- REFERRAL AUTO-FILL SCRIPT -->
+  <!-- SCRIPTS -->
   <script>
-    const ENTRY_ID = "entry.1176641648";
-    const FORM_BASE = "https://docs.google.com/forms/d/e/1FAIpQLScIOgIKNmn3BUHlOXTFvwBnLFiSuvqKjIA-AvIDsosoBx-ZLw/viewform";
+    // Payment base form
+    const PAYMENT_FORM = "https://forms.gle/RbcvsuKGEbUvC5K19";
 
-    const params = new URLSearchParams(window.location.search);
-    const refCode = params.get("ref");
+    // Update pay links (we already included product param in href as fallback).
+    // Ensure links open in same tab on mobile, new tab on desktop.
+    function setLinkTargets() {
+      const isDesktop = window.innerWidth > 768;
+      const payLinks = document.querySelectorAll('a[href^="' + PAYMENT_FORM + '"]');
+      payLinks.forEach(a => {
+        if (isDesktop) {
+          a.target = "_blank";
+          a.rel = "noopener";
+        } else {
+          a.target = "_self";
+          a.rel = "";
+        }
+      });
 
-    function buildReferralLink(code) {
-      if (!code) return FORM_BASE + "?usp=pp_url";
-      return FORM_BASE + "?usp=pp_url&" + ENTRY_ID + "=" + encodeURIComponent(code);
+      const wa = document.getElementById('waJoin');
+      if (wa) {
+        if (isDesktop) { wa.target = "_blank"; wa.rel = "noopener"; }
+        else { wa.target = "_self"; wa.rel = ""; }
+      }
+
+      // main pay button
+      const payMain = document.getElementById('payMain');
+      if (payMain) {
+        if (isDesktop) { payMain.target = "_blank"; payMain.rel = "noopener"; }
+        else { payMain.target = "_self"; payMain.rel = ""; }
+      }
     }
 
-    // referral link
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("ctaReferral").href = buildReferralLink(refCode);
-    });
-
-    // WhatsApp: open in same tab on mobile, new tab on desktop
-    const waBtn = document.getElementById("waBtn");
-    if (window.innerWidth > 768) {
-      waBtn.target = "_blank";
-      waBtn.rel = "noopener";
-    }
+    // call once & on resize/orientation change
+    setLinkTargets();
+    window.addEventListener('resize', setLinkTargets);
+    window.addEventListener('orientationchange', () => setTimeout(setLinkTargets, 120));
   </script>
 
 </body>
