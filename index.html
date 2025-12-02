@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Think & Trade — Algorithmic Mentorship & Signals</title>
   <meta name="description" content="Think & Trade — Institutional-style mentorship and signals. Learn algorithmic price alignment, trade with precision, and grow through compounding." />
-  <!-- Google tag (gtag.js) -->
+  
+  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LRR1B15V7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -20,14 +21,36 @@
   <style>
     :root{
       --brand-green:#0f9d58;
+      --brand-green-dark:#0a6c3d;
       --brand-dark:#081223;
-      --muted:#64748b;
+      --muted:#b7c6b7;
     }
-    body { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; background:linear-gradient(180deg,#ffffff 0%, #f7fff7 100%); }
-    .card { background: white; border-radius: 14px; box-shadow: 0 8px 24px rgba(6,8,15,0.06); }
+
+    /* GLOBAL BACKGROUND */
+    body { 
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: linear-gradient(180deg, var(--brand-green) 0%, var(--brand-green-dark) 100%);
+      color: white;
+    }
+
+    /* White cards pop on green background */
+    .card { 
+      background: white; 
+      color: #0d0d0d;
+      border-radius: 14px; 
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15); 
+    }
+
     .btn-primary { background: var(--brand-dark); color: white; }
     .btn-accent { background: var(--brand-green); color: white; }
+    .btn-outline-green { color: var(--brand-green); border-color: var(--brand-green); }
+
+    header { border-color: rgba(255,255,255,0.2); }
+    nav a { color:white; }
+
     .small { font-size: 0.9rem; color: var(--muted); }
+
     /* responsive tweaks */
     @media (max-width:640px){
       header .hero-grid { gap: 18px; padding: 20px; }
@@ -36,52 +59,69 @@
   </style>
 </head>
 
-<body class="antialiased text-gray-800">
+<body class="antialiased">
 
   <!-- Header / Hero -->
   <header class="py-10 border-b">
     <div class="max-w-6xl mx-auto px-6">
       <div class="flex items-center justify-between gap-6">
+        
+        <!-- Branding -->
         <div class="flex items-center gap-4">
-          <img src="WhatsApp Image 2025-11-20 at 02.49.45_c2297475.jpg" alt="Think & Trade logo" class="w-16 h-16 rounded-full object-cover shadow" />
+          <img src="WhatsApp Image 2025-11-20 at 02.49.45_c2297475.jpg" 
+               alt="Think & Trade logo" 
+               class="w-16 h-16 rounded-full object-cover shadow" />
           <div>
-            <div class="text-sm text-gray-600">Think & Trade</div>
-            <div class="text-xs text-gray-500">Professional trading mentorship & signals</div>
+            <div class="text-sm opacity-90">Think & Trade</div>
+            <div class="text-xs opacity-75">Professional trading mentorship & signals</div>
           </div>
         </div>
 
+        <!-- Nav -->
         <nav class="hidden md:flex items-center gap-4 text-sm">
           <a href="#services" class="hover:underline">Services</a>
           <a href="#philosophy" class="hover:underline">Philosophy</a>
           <a href="#learn" class="hover:underline">What you learn</a>
           <a href="#faq" class="hover:underline">FAQ</a>
-          <a id="waTop" href="https://chat.whatsapp.com/INuWgPMBCHnA8rzAiln3PN" class="px-3 py-2 rounded text-white btn-accent">WhatsApp</a>
+          <a id="waTop" href="https://chat.whatsapp.com/INuWgPMBCHnA8rzAiln3PN" 
+             class="px-3 py-2 rounded text-white btn-accent">WhatsApp</a>
         </nav>
 
         <div class="md:hidden">
-          <a id="playMobile" href="https://dxdy1010.github.io/trading-sim/" class="px-3 py-2 rounded text-white btn-primary text-xs">Play Simulator</a>
+          <a id="playMobile" 
+             href="https://dxdy1010.github.io/trading-sim/" 
+             class="px-3 py-2 rounded text-white btn-primary text-xs">Play Simulator</a>
         </div>
       </div>
 
-      <!-- Hero block -->
+      <!-- Hero Card -->
       <div class="mt-8 card p-8 grid lg:grid-cols-3 gap-8 hero-grid">
         <div class="lg:col-span-2">
           <h1 class="hero-title text-3xl md:text-4xl font-extrabold text-[color:var(--brand-dark)] leading-tight">
             Think & Trade — Algorithmic Price Alignment for Disciplined Traders
           </h1>
 
-          <p class="mt-4 text-gray-600 max-w-2xl">
-            Learn to read algorithmic liquidity runs, trade with precision, and let compounding handle long-term growth. We focus on execution, risk control, and institutional-grade frameworks — not hype.
+          <p class="mt-4 text-gray-700 max-w-2xl">
+            Learn to read algorithmic liquidity runs, trade with precision, 
+            and let compounding handle long-term growth. 
+            We focus on execution, risk control, and institutional-grade frameworks — not hype.
           </p>
 
           <div class="mt-6 flex flex-wrap gap-3">
-            <a id="ctaMentor" href="https://forms.gle/RbcvsuKGEbUvC5K19?product=3-Month%20Mentorship" class="inline-block px-5 py-3 rounded-lg btn-primary font-semibold shadow-sm">Join Mentorship</a>
-            <a href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Signals" class="inline-block px-5 py-3 rounded-lg border border-gray-200 text-gray-700">Subscribe to Signals</a>
-            <a href="https://dxdy1010.github.io/trading-sim/" class="inline-block px-5 py-3 rounded-lg text-[color:var(--brand-green)] border border-[color:var(--brand-green)]">Play Simulator</a>
+            <a id="ctaMentor" 
+               href="https://forms.gle/RbcvsuKGEbUvC5K19?product=3-Month%20Mentorship" 
+               class="inline-block px-5 py-3 rounded-lg btn-primary font-semibold shadow-sm">Join Mentorship</a>
+
+            <a href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Signals" 
+               class="inline-block px-5 py-3 rounded-lg border border-gray-300 text-gray-700">Subscribe to Signals</a>
+
+            <a href="https://dxdy1010.github.io/trading-sim/" 
+               class="inline-block px-5 py-3 rounded-lg btn-outline-green border font-semibold">Play Simulator</a>
           </div>
 
-          <!-- small note -->
-          <p class="mt-4 small">We do not promise guaranteed returns. Trading involves risk — see the Trust & Risk section below.</p>
+          <p class="mt-4 small text-gray-600">
+            We do not promise guaranteed returns. Trading involves risk.
+          </p>
         </div>
 
         <aside class="hidden lg:block p-4">
@@ -93,89 +133,96 @@
             </div>
 
             <div class="mt-4">
-              <a href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Signals" class="block text-center px-3 py-2 rounded btn-accent font-semibold">Pay & Register (Signals)</a>
+              <a href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Signals" 
+                 class="block text-center px-3 py-2 rounded btn-accent font-semibold">Pay & Register (Signals)</a>
             </div>
-            <div class="mt-3 text-xs text-gray-500">Or explore mentorship & lifetime options below.</div>
           </div>
         </aside>
       </div>
     </div>
   </header>
 
-  <!-- Main content -->
+
+  <!-- Main -->
   <main class="max-w-6xl mx-auto px-6 -mt-6 pb-20">
 
     <!-- Philosophy -->
     <section id="philosophy" class="mt-10">
       <div class="card p-8">
         <h2 class="text-2xl font-bold text-[color:var(--brand-dark)]">Core Philosophy</h2>
+
         <p class="mt-3 text-gray-700">
-          We teach <strong>algorithmic price delivery</strong> — a disciplined, rules-based approach that identifies liquidity-driven moves and trades only when high-probability conditions align. This reduces emotion, enforces risk control, and prioritizes precision over frequency.
+          We teach <strong>algorithmic price delivery</strong> — a disciplined, 
+          rules-based approach that identifies liquidity-driven moves 
+          and trades only when high-probability conditions align.
         </p>
 
         <div class="mt-6 grid md:grid-cols-3 gap-4">
           <div>
             <h4 class="font-semibold">Algorithmic price movement</h4>
-            <p class="small mt-1">Markets move in measurable patterns driven by liquidity and large participants. We map those conditions and trade when the structure is in our favor.</p>
+            <p class="small mt-1">Markets move in measurable patterns driven by liquidity and institutional flows.</p>
           </div>
           <div>
             <h4 class="font-semibold">Buyside vs sellside runs</h4>
-            <p class="small mt-1">We identify when price is preparing for a buyside (up) or sellside (down) liquidity run, and align entries accordingly.</p>
+            <p class="small mt-1">We identify when price is preparing for major liquidity runs and align entries accordingly.</p>
           </div>
           <div>
             <h4 class="font-semibold">Precision > Frequency</h4>
-            <p class="small mt-1">We do not trade every day. We trade the right setups and let compounding produce results over time.</p>
+            <p class="small mt-1">We trade only when conditions align. No emotional or impulsive trading.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- What students learn -->
+    <!-- Learning -->
     <section id="learn" class="mt-8">
-      <h3 class="text-xl font-bold mb-3">What Students Will Learn</h3>
+      <h3 class="text-xl font-bold mb-3 text-white">What Students Will Learn</h3>
       <div class="card p-6">
         <ul class="grid md:grid-cols-2 gap-4 list-disc pl-5">
-          <li>How to identify algorithmic liquidity targets</li>
-          <li>How to detect conditions for a high-probability run</li>
-          <li>Precise entry and exit timing with risk controls</li>
-          <li>How compounding fits into your trading plan</li>
-          <li>How to remove emotion from decision-making</li>
-          <li>How to create and follow a repeatable execution routine</li>
+          <li>Algorithmic liquidity mapping</li>
+          <li>Detect high-probability run conditions</li>
+          <li>Entry/exit timing with risk controls</li>
+          <li>Compounding as a long-term model</li>
+          <li>Emotion-free execution</li>
+          <li>Repeatable daily routine</li>
         </ul>
       </div>
     </section>
 
-    <!-- Services & Pricing (kept from your code, rewritten to be clear and serious) -->
+    <!-- Services -->
     <section id="services" class="mt-8">
-      <h3 class="text-2xl font-bold">Services</h3>
-      <p class="small mt-1 text-gray-600">Click a card to pay & register. After payment upload proof in the registration form; we'll verify and grant access within 24 hours.</p>
+      <h3 class="text-2xl font-bold text-white">Services</h3>
+      <p class="small text-gray-200 mt-1">Click a card to pay & register.</p>
 
       <div class="mt-6 grid gap-6 md:grid-cols-3">
+
         <!-- Signals -->
         <article class="card p-6">
           <div class="flex justify-between items-start">
             <div>
               <h4 class="font-bold text-[color:var(--brand-green)]">Signals</h4>
-              <p class="mt-2 text-sm text-gray-600">Monthly subscription providing curated, high-probability trade setups with clear entry, stop-loss and take-profit levels. Quality over quantity; risk-first approach.</p>
+              <p class="mt-2 text-sm text-gray-600">
+                Monthly subscription providing curated, high-probability setups.
+              </p>
             </div>
             <div class="text-right">
               <div class="text-2xl font-extrabold">$600</div>
               <div class="text-xs text-gray-500">per month</div>
             </div>
           </div>
-
           <div class="mt-4 flex justify-between items-center">
-            <div class="small text-gray-500">WhatsApp support • Strategy notes</div>
-            <a href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Signals" class="px-3 py-2 rounded btn-accent font-semibold">Pay & Register</a>
+            <p class="small text-gray-600">WhatsApp support</p>
+            <a href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Signals" 
+               class="px-3 py-2 rounded btn-accent font-semibold">Pay</a>
           </div>
         </article>
 
-        <!-- 3-Month Mentorship -->
+        <!-- 3 Month -->
         <article class="card p-6 border-2 border-[color:var(--brand-dark)]">
           <div class="flex justify-between items-start">
             <div>
               <h4 class="font-bold text-[color:var(--brand-dark)]">3-Month Mentorship</h4>
-              <p class="mt-2 text-sm text-gray-600">A structured 12-week program: lessons, live trade reviews, tailored plans, and performance feedback to change how you approach markets.</p>
+              <p class="mt-2 text-sm text-gray-600">Structured 12-week program.</p>
             </div>
             <div class="text-right">
               <div class="text-2xl font-extrabold">$1,200</div>
@@ -184,58 +231,67 @@
           </div>
 
           <div class="mt-4 flex justify-between items-center">
-            <div class="small text-gray-500">Live calls • Personalized plan</div>
-            <a href="https://forms.gle/RbcvsuKGEbUvC5K19?product=3-Month%20Mentorship" class="px-3 py-2 rounded btn-primary font-semibold">Pay & Register</a>
+            <p class="small text-gray-600">Live calls • Plans</p>
+            <a href="https://forms.gle/RbcvsuKGEbUvC5K19?product=3-Month%20Mentorship" 
+               class="px-3 py-2 rounded btn-primary font-semibold">Pay</a>
           </div>
         </article>
 
-        <!-- Lifetime Membership -->
+        <!-- Lifetime -->
         <article class="card p-6">
           <div class="flex justify-between items-start">
             <div>
               <h4 class="font-bold text-[color:var(--brand-dark)]">Lifetime Membership</h4>
-              <p class="mt-2 text-sm text-gray-600">Lifetime access to all course content, community, updates, and priority support. For traders committed to long-term growth.</p>
+              <p class="mt-2 text-sm text-gray-600">
+                Lifetime access to everything.
+              </p>
             </div>
             <div class="text-right">
               <div class="text-2xl font-extrabold">$2,400</div>
               <div class="text-xs text-gray-500">one-time</div>
             </div>
           </div>
-
           <div class="mt-4 flex justify-between items-center">
-            <div class="small text-gray-500">Continuous updates • Priority support</div>
-            <a href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Lifetime%20Membership" class="px-3 py-2 rounded border border-[color:var(--brand-green)] text-[color:var(--brand-green)] font-semibold">Pay & Register</a>
+            <p class="small text-gray-600">Priority support</p>
+            <a href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Lifetime%20Membership" 
+               class="px-3 py-2 rounded border border-[color:var(--brand-green)] text-[color:var(--brand-green)] font-semibold">
+              Pay
+            </a>
           </div>
         </article>
+
       </div>
     </section>
 
-    <!-- Trust & Risk -->
+    <!-- Trust -->
     <section id="trust" class="mt-8">
       <div class="card p-6">
-        <h3 class="text-xl font-bold">Trust & Risk</h3>
+        <h3 class="text-xl font-bold text-[color:var(--brand-dark)]">Trust & Risk</h3>
         <ul class="mt-3 list-disc pl-5 text-sm text-gray-700">
-          <li>Trading involves risk. Past performance does not guarantee future results.</li>
-          <li>We emphasize risk control, position sizing, and repeatable execution — not promises of profit.</li>
-          <li>Refunds and access policies are described in the registration process. Please read terms before buying.</li>
+          <li>Trading involves risk.</li>
+          <li>No guaranteed returns.</li>
+          <li>We prioritize discipline and risk control.</li>
         </ul>
       </div>
     </section>
 
     <!-- Testimonials -->
     <section id="testimonials" class="mt-8">
-      <h3 class="text-2xl font-bold">Testimonials</h3>
+      <h3 class="text-2xl font-bold text-white">Testimonials</h3>
+
       <div class="mt-4 grid md:grid-cols-3 gap-4">
         <div class="card p-4">
-          <p class="italic">“This mentorship changed how I plan and execute trades. My risk discipline improved immediately.”</p>
+          <p class="italic">“This mentorship changed my execution instantly.”</p>
           <p class="mt-3 font-bold">— David</p>
         </div>
+        
         <div class="card p-4">
-          <p class="italic">“Signals are clear, concise and easy to follow. I've regained confidence following the plans.”</p>
+          <p class="italic">“Signals are clear and consistent.”</p>
           <p class="mt-3 font-bold">— Amara</p>
         </div>
+
         <div class="card p-4">
-          <p class="italic">“Lifetime access keeps me learning. The community and updates are valuable.”</p>
+          <p class="italic">“The lifetime membership is worth it.”</p>
           <p class="mt-3 font-bold">— Tunde</p>
         </div>
       </div>
@@ -243,33 +299,39 @@
 
     <!-- FAQ -->
     <section id="faq" class="mt-8">
-      <h3 class="text-2xl font-bold">FAQ</h3>
+      <h3 class="text-2xl font-bold text-white">FAQ</h3>
+
       <div class="mt-4 space-y-3">
         <details class="card p-4">
           <summary class="font-semibold">How do payments work?</summary>
-          <div class="mt-2 small text-gray-600">Click Pay & Register for a plan. You will be taken to the registration form where you upload proof of payment. We verify and grant access within 24 hours.</div>
+          <p class="mt-2 small text-gray-600">Upload proof of payment; access granted within 24 hours.</p>
         </details>
 
         <details class="card p-4">
-          <summary class="font-semibold">What is the signals cadence?</summary>
-          <div class="mt-2 small text-gray-600">Signals are delivered during identified market windows. We prioritize high-probability setups — this is not a daily broadcast.</div>
+          <summary class="font-semibold">How often are signals sent?</summary>
+          <p class="mt-2 small text-gray-600">Only when conditions align.</p>
         </details>
 
         <details class="card p-4">
-          <summary class="font-semibold">Do you guarantee profits?</summary>
-          <div class="mt-2 small text-gray-600">No. We provide a disciplined framework and trade ideas; trading entails risk and there are no guarantees.</div>
+          <summary class="font-semibold">Are profits guaranteed?</summary>
+          <p class="mt-2 small text-gray-600">No. Trading has risks.</p>
         </details>
       </div>
     </section>
 
-    <!-- CTA / Final -->
+    <!-- CTA -->
     <section class="mt-10 text-center">
       <div class="card p-8">
         <h3 class="text-xl font-bold">Join a disciplined, algorithmic approach to trading</h3>
-        <p class="mt-3 text-gray-600">Learn the system. Master execution. Grow through compounding.</p>
+        <p class="mt-3 text-gray-700">Learn the system. Master execution. Grow through compounding.</p>
+
         <div class="mt-6 flex justify-center gap-3">
-          <a id="finalCta" href="https://forms.gle/RbcvsuKGEbUvC5K19?product=3-Month%20Mentorship" class="px-6 py-3 rounded-lg btn-primary font-semibold">Begin Mentorship</a>
-          <a href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Signals" class="px-6 py-3 rounded-lg border border-gray-200">Subscribe to Signals</a>
+          <a id="finalCta" 
+             href="https://forms.gle/RbcvsuKGEbUvC5K19?product=3-Month%20Mentorship" 
+             class="px-6 py-3 rounded-lg btn-primary font-semibold">Begin Mentorship</a>
+
+          <a href="https://forms.gle/RbcvsuKGEbUvC5K19?product=Signals" 
+             class="px-6 py-3 rounded-lg border border-gray-300 text-gray-700">Subscribe to Signals</a>
         </div>
       </div>
     </section>
@@ -277,30 +339,31 @@
   </main>
 
   <!-- Footer -->
-  <footer class="py-8 text-center text-sm text-gray-600">
-    © <span id="year"></span> Think & Trade • Hosted on GitHub Pages • <a href="https://dxdy1010.github.io/trading-sim/" class="text-[color:var(--brand-green)] hover:underline">Play Simulator</a>
+  <footer class="py-8 text-center text-sm text-gray-200">
+    © <span id="year"></span> Think & Trade — Hosted on GitHub Pages • 
+    <a href="https://dxdy1010.github.io/trading-sim/" class="text-white underline">Simulator</a>
   </footer>
 
-  <!-- Small script for dynamic year + link behavior (mobile vs desktop targets) -->
+  <!-- Behavior Logic -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Open forms in same tab on mobile, new tab on desktop (your previous rule)
     const PAYMENT_BASE = "https://forms.gle/RbcvsuKGEbUvC5K19";
     function setLinkTargets(){
       const isDesktop = window.innerWidth > 768;
       document.querySelectorAll('a[href^="' + PAYMENT_BASE + '"]').forEach(a=>{
-        if(isDesktop){ a.target = "_blank"; a.rel = "noopener"; }
-        else { a.target = "_self"; a.rel = ""; }
+        if(isDesktop){ a.target="_blank"; a.rel="noopener"; }
+        else { a.target="_self"; a.rel=""; }
       });
 
-      // WhatsApp: same-tab on mobile, new-tab on desktop
       const waTop = document.getElementById('waTop');
-      if(waTop) { if(window.innerWidth>768){ waTop.target="_blank"; waTop.rel="noopener"; } else { waTop.target="_self"; waTop.rel=""; } }
+      if(waTop){ if(isDesktop){ waTop.target="_blank"; } else { waTop.target="_self"; } }
     }
+
     setLinkTargets();
     window.addEventListener('resize', setLinkTargets);
-    window.addEventListener('orientationchange', ()=> setTimeout(setLinkTargets,120));
+    window.addEventListener('orientationchange', ()=> setTimeout(setLinkTargets, 120));
   </script>
+
 </body>
 </html>
